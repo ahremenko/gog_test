@@ -8,7 +8,7 @@ with dim_games as (
         genre,
         developer,
         release_date 
-    from raw.game_metadata
+    from {{ ref("game_metadata") }}
 )
 
 select * from dim_games
