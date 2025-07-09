@@ -1,0 +1,11 @@
+version: 2
+
+models:
+    - name: dim_games
+      description: "Games (dimension)"
+      columns:
+          - name: game_id
+            description: "The game id, PK"
+            tests:
+                - unique
+                - not_null

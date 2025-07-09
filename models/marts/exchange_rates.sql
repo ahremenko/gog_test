@@ -6,7 +6,7 @@ with exchange_rates as (
         currency_from,
         currency_to,
         rate
-    from raw.exchange_rates    
+    from raw.exchange_rates
 )
 
 select * from exchange_rates
