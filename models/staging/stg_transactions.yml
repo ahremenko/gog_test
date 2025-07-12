@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: "Raw transactions"
+    columns:
+        - name: transaction_id
+          description: "The transaction id, PK"
+          tests:
+              - unique
+              - not_null

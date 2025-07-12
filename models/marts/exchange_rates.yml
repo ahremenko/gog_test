@@ -1,0 +1,29 @@
+version: 2
+
+models:
+    - name: exchange_rates
+      description: "Currency exchange rates"
+      config:
+        elementary:
+          timestamp_column: rate_date  
+      columns:
+        - name: rate    
+          tests:
+            - elementary.column_anomalies:
+                column_anomalies:
+                  - standard_deviation
+                anomaly_sensitivity: 0.4  
+                dimensions: 
+                  - currency_from
+                  - currency_to
+                detection_period:
+                  period: day
+                  count: 2
+                training_period:
+                  period: day
+                  count: 14
+                time_bucket:
+                  period: day
+                  count: 1
+                config:
+                  severity: warn  

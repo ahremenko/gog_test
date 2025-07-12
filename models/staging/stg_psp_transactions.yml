@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_psp_transactions
+    description: "Payment service provider transactions"
+    columns:
+        - name: psp_transaction_id
+          description: "The transaction id, PK"
+          tests:
+              - unique
+              - not_null
