@@ -1,0 +1,12 @@
+version: 2
+
+models:
+    - name: fact_daily_revenue
+      description: "Revenue aggregated by day, currency, product_name, payment_method and game_genre"
+      columns:
+        - name: transaction_day    
+        - name: currency
+        - name: product_name
+        - name: payment_method
+        - name: game_genre
+        - name: revenue
